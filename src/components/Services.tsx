@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
 import { Sprout, Palette, Flower2, Trash2, Sparkles, Snowflake } from 'lucide-react'
+import { trackServiceClick } from '../lib/analytics'
 
 const Services = () => {
   const services = [
@@ -71,7 +72,10 @@ const Services = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer group">
+                <Card 
+                  className="h-full hover:shadow-lg transition-shadow cursor-pointer group"
+                  onClick={() => trackServiceClick(service.title)}
+                >
                   <div className="relative overflow-hidden rounded-t-lg">
                     <img
                       src={service.image}

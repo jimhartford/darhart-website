@@ -1,5 +1,6 @@
 import { Phone } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { trackPhoneClick } from '../lib/analytics'
 
 const Hero = () => {
   return (
@@ -35,6 +36,7 @@ const Hero = () => {
           <div className="flex justify-center items-center">
             <a
               href="tel:+15132593912"
+              onClick={() => trackPhoneClick('hero')}
               className="flex items-center gap-2 text-xl font-semibold hover:text-lawn-300 transition-colors"
             >
               <Phone className="w-5 h-5" />

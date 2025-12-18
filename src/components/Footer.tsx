@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react'
+import { trackPhoneClick, trackEmailClick, trackSocialClick } from '../lib/analytics'
 
 const Footer = () => {
 
@@ -33,6 +34,7 @@ const Footer = () => {
             </div>
             <a
               href="tel:+15132593912"
+              onClick={() => trackPhoneClick('footer')}
               className="text-lawn-600 font-semibold mb-4 hover:text-lawn-700 transition-colors"
             >
               (513) 259-3912
@@ -42,6 +44,7 @@ const Footer = () => {
                 href="https://www.facebook.com/share/1AX1rWbE1h/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick('facebook', 'footer')}
                 className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center hover:bg-blue-700 transition-colors"
                 aria-label="Facebook"
               >
@@ -66,6 +69,7 @@ const Footer = () => {
             </div>
             <a
               href="mailto:info@darlahartford.com"
+              onClick={() => trackEmailClick('footer')}
               className="text-lawn-600 font-semibold hover:text-lawn-700 transition-colors"
             >
               info@darlahartford.com

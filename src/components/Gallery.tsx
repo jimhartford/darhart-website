@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
+import { trackGalleryClick } from '../lib/analytics'
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<{ column: 'before' | 'after', index: number } | null>(null)
@@ -105,7 +106,10 @@ const Gallery = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative overflow-hidden rounded-lg cursor-pointer group"
-                  onClick={() => setSelectedImage({ column: 'after', index })}
+                  onClick={() => {
+                    trackGalleryClick('after', index)
+                    setSelectedImage({ column: 'after', index })
+                  }}
                 >
                   <img
                     src={image}

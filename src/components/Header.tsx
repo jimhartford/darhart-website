@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Phone, Mail } from 'lucide-react'
+import { trackPhoneClick, trackEmailClick, trackSocialClick, trackNavigationClick } from '../lib/analytics'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -22,6 +23,7 @@ const Header = () => {
   }
 
   const scrollToSection = (id: string) => {
+    trackNavigationClick(id)
     const element = document.getElementById(id)
     if (element) {
       // Account for taller header with site name on top
@@ -77,6 +79,7 @@ const Header = () => {
               href="https://www.facebook.com/share/1AX1rWbE1h/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackSocialClick('facebook', 'header_desktop')}
               className="hover:opacity-80 transition-opacity"
               aria-label="Visit our Facebook"
             >
@@ -93,6 +96,7 @@ const Header = () => {
               href="https://www.instagram.com/darlahartfordllc"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackSocialClick('instagram', 'header_desktop')}
               className="hover:opacity-80 transition-opacity"
               aria-label="Visit our Instagram"
             >
@@ -130,6 +134,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-3 lg:gap-4 ml-auto">
             <a
               href="tel:+15132593912"
+              onClick={() => trackPhoneClick('header_desktop')}
               className="text-lawn-700 hover:text-lawn-600 transition-colors"
               aria-label="Call (513) 259-3912"
             >
@@ -137,6 +142,7 @@ const Header = () => {
             </a>
             <a
               href="mailto:info@darlahartford.com"
+              onClick={() => trackEmailClick('header_desktop')}
               className="text-lawn-700 hover:text-lawn-600 transition-colors"
               aria-label="Email info@darlahartford.com"
             >
@@ -177,6 +183,7 @@ const Header = () => {
                   href="https://www.facebook.com/share/1AX1rWbE1h/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackSocialClick('facebook', 'header_mobile')}
                   className="hover:opacity-80 transition-opacity"
                   aria-label="Visit our Facebook"
                 >
@@ -193,6 +200,7 @@ const Header = () => {
                   href="https://www.instagram.com/darlahartfordllc"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackSocialClick('instagram', 'header_mobile')}
                   className="hover:opacity-80 transition-opacity"
                   aria-label="Visit our Instagram"
                 >
@@ -213,6 +221,7 @@ const Header = () => {
                 </a>
                 <a
                   href="tel:+15132593912"
+                  onClick={() => trackPhoneClick('header_mobile')}
                   className="text-lawn-700 hover:text-lawn-600 transition-colors"
                   aria-label="Call (513) 259-3912"
                 >
@@ -220,6 +229,7 @@ const Header = () => {
                 </a>
                 <a
                   href="mailto:info@darlahartford.com"
+                  onClick={() => trackEmailClick('header_mobile')}
                   className="text-lawn-700 hover:text-lawn-600 transition-colors"
                   aria-label="Email info@darlahartford.com"
                 >

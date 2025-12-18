@@ -8,6 +8,7 @@ import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { Form, FormField, FormLabel, FormMessage } from './ui/form'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
+import { trackPhoneClick, trackEmailClick } from '../lib/analytics'
 import { Phone, Mail, MapPin } from 'lucide-react'
 
 const contactSchema = z.object({
@@ -205,6 +206,7 @@ const Contact = () => {
                     <p className="font-semibold">Phone</p>
                     <a
                       href="tel:+15132593912"
+                      onClick={() => trackPhoneClick('contact_section')}
                       className="text-lawn-600 hover:text-lawn-700"
                     >
                       (513) 259-3912
@@ -217,6 +219,7 @@ const Contact = () => {
                     <p className="font-semibold">Email</p>
                     <a
                       href="mailto:info@darlahartford.com"
+                      onClick={() => trackEmailClick('contact_section')}
                       className="text-lawn-600 hover:text-lawn-700"
                     >
                       info@darlahartford.com
