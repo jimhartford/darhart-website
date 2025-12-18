@@ -2,6 +2,8 @@
 
 A modern, responsive single-page marketing website for a lawn care and landscaping company built with React, TypeScript, Tailwind CSS, and shadcn/ui components.
 
+<!-- Trigger deployment -->
+
 ## Features
 
 - 🎨 Modern, professional design inspired by industry-leading lawn care websites
