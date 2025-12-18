@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen md:h-[700px] lg:h-[800px] flex items-center justify-center bg-gradient-to-br from-lawn-600 via-lawn-700 to-lawn-800 text-white"
+      className="relative min-h-screen md:h-[700px] lg:h-[800px] bg-gradient-to-br from-lawn-600 via-lawn-700 to-lawn-800 text-white"
       style={{
         backgroundImage: `url('${import.meta.env.BASE_URL}images/hero/grass.JPG')`,
         backgroundSize: 'cover',
@@ -16,8 +16,9 @@ const Hero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center flex items-center justify-center min-h-full py-20">
+      {/* Content wrapper - positioned below header, flex centers content */}
+      <div className="absolute z-10 top-[140px] md:top-[120px] left-0 right-0 h-[calc(100vh-140px)] md:h-[calc(100vh-120px)] flex items-center justify-center">
+        <div className="container mx-auto px-4 text-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,6 +42,7 @@ const Hero = () => {
             </a>
           </div>
         </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -5,7 +5,7 @@ const About = () => {
     {
       name: 'Samuel Darla',
       role: 'Co-Founder',
-      image: `${import.meta.env.BASE_URL}images/about-us/samuel-darla.jpeg`,
+      image: `${import.meta.env.BASE_URL}images/about-us/samuel-darla.jpg`,
       bio: "I'm Samuel Darla, co-founder of Darla Hartford, and I take pride in being directly involved in the work we do. From planning and site preparation to installation and final walkthroughs, I personally oversee projects to ensure every detail meets our standards. My dedication is rooted in quality workmanship, clear communication, and delivering results our clients can trust.",
     },
     {
