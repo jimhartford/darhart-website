@@ -64,7 +64,7 @@ const Header = () => {
           >
             <img
               src={`${import.meta.env.BASE_URL}images/logo.png`}
-              alt="Darhart Lawn Care - Landscaping"
+              alt="Darla Hartford Landscaping"
               className="h-10 md:h-14 lg:h-16 w-auto object-contain"
             />
           </button>
@@ -88,11 +88,11 @@ const Header = () => {
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-3 lg:gap-4">
             <a
-              href="tel:+1234567890"
+              href="tel:+15132593912"
               className="flex items-center gap-2 text-lawn-700 hover:text-lawn-600 font-medium text-sm lg:text-base"
             >
               <Phone className="w-4 h-4" />
-              <span className="hidden lg:inline">(123) 456-7890</span>
+              <span className="hidden lg:inline">(513) 259-3912</span>
               <span className="lg:hidden">Call</span>
             </a>
             <Button
@@ -133,11 +133,11 @@ const Header = () => {
               ))}
               <div className="pt-2 border-t border-gray-200 mt-2 space-y-2">
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+15132593912"
                   className="flex items-center gap-2 text-lawn-700 font-medium py-2 px-2 text-base"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>(123) 456-7890</span>
+                  <span>(513) 259-3912</span>
                 </a>
                 <Button
                   onClick={() => scrollToSection('contact')}

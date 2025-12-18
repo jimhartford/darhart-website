@@ -54,11 +54,11 @@ const Hero = () => {
               GET A FREE ESTIMATE!
             </Button>
             <a
-              href="tel:+1234567890"
+              href="tel:+15132593912"
               className="flex items-center gap-2 text-xl font-semibold hover:text-lawn-300 transition-colors"
             >
               <Phone className="w-5 h-5" />
-              CALL TODAY! (123) 456-7890
+              CALL TODAY! (513) 259-3912
             </a>
           </div>
         </motion.div>

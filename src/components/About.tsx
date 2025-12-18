@@ -30,7 +30,7 @@ const About = () => {
             ABOUT US
           </h2>
           <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Meet the dedicated team behind Darhart Lawn Care, committed to bringing your outdoor vision to life.
+            Meet the dedicated team behind Darla Hartford Landscaping, committed to bringing your outdoor vision to life.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 mb-12">
@@ -72,7 +72,7 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
             <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              Darhart Lawn Care specializes in the creative design, professional installation, and maintenance
+              Darla Hartford Landscaping specializes in the creative design, professional installation, and maintenance
               of landscape plantings, walkways, patios, retaining walls, landscape lighting, water gardens, and
               other landscape amenities. We enhance the beauty of your home or business by creating artistic and
               practical designs suited to your specific needs. Your satisfaction is very important to us, and our

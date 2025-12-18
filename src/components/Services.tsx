@@ -1,43 +1,43 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
-import { Sprout, Wrench, Palette, HardHat, Droplets, Lightbulb } from 'lucide-react'
+import { Sprout, Palette, Flower2, Trash2, Sparkles, Snowflake } from 'lucide-react'
 
 const Services = () => {
   const services = [
     {
-      title: 'Lawn Cutting & Fertilization',
-      description: 'Regular mowing and professional fertilization to keep your lawn healthy and vibrant.',
+      title: 'Lawn Care & Turf Maintenance',
+      description: 'Consistent care for healthy, sharp-looking lawns. Weekly/bi-weekly mowing, string trimming, edging, blowing, weed control & turf upkeep.',
       icon: Sprout,
       image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
     },
     {
-      title: 'Property Maintenance',
-      description: 'Comprehensive property maintenance services to keep your landscape looking its best.',
-      icon: Wrench,
-      image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
-    },
-    {
-      title: 'Landscape Design & Installation',
-      description: 'Creative landscape design and professional installation tailored to your vision.',
+      title: 'Landscape Design & Installations',
+      description: 'Custom enhancements and new landscape features. Landscape bed design & installs, flower planting, tree planting, and small landscape projects.',
       icon: Palette,
-      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
-    },
-    {
-      title: 'Hardscape Services',
-      description: 'Patios, walkways, retaining walls, and other hardscape features.',
-      icon: HardHat,
       image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
     },
     {
-      title: 'Water Features',
-      description: 'Beautiful water gardens and fountains to add tranquility to your space.',
-      icon: Droplets,
+      title: 'Mulching, Beds & Plant Care',
+      description: 'Detail-focused services that define curb appeal. Mulch installation, bed edging, shrub trimming, hedge shaping, and tree pruning.',
+      icon: Flower2,
       image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
     },
     {
-      title: 'Landscape Lighting',
-      description: 'Architectural and event lighting to enhance your property\'s beauty day and night.',
-      icon: Lightbulb,
+      title: 'Property Clean-Ups & Debris Removal',
+      description: 'One-time or recurring cleanup solutions. Spring & fall clean-ups, leaf removal, branch & debris removal, and end-of-season weed control.',
+      icon: Trash2,
+      image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
+    },
+    {
+      title: 'Exterior Cleaning & Specialty Services',
+      description: 'High-impact services beyond landscaping. Power washing, holiday light installation & takedown, and tree & plant protection for winter.',
+      icon: Sparkles,
+      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+    },
+    {
+      title: 'Snow & Ice Management',
+      description: 'Reliable winter safety and access. Snow plowing, snow blowing, sidewalk shoveling, salting & ice management.',
+      icon: Snowflake,
       image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
     },
   ]

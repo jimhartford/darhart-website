@@ -1,4 +1,4 @@
-# Darhart Lawn Care Website
+# Darla Hartford Landscaping Website
 
 A modern, responsive single-page marketing website for a lawn care and landscaping company built with React, TypeScript, Tailwind CSS, and shadcn/ui components.
 

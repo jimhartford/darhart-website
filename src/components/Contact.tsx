@@ -117,7 +117,7 @@ const Contact = () => {
                     id="phone"
                     type="tel"
                     {...register('phone')}
-                    placeholder="(123) 456-7890"
+                    placeholder="(513) 259-3912"
                   />
                   {errors.phone && (
                     <FormMessage>{errors.phone.message}</FormMessage>
@@ -204,10 +204,10 @@ const Contact = () => {
                   <div>
                     <p className="font-semibold">Phone</p>
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+15132593912"
                       className="text-lawn-600 hover:text-lawn-700"
                     >
-                      (123) 456-7890
+                      (513) 259-3912
                     </a>
                   </div>
                 </div>
@@ -216,10 +216,10 @@ const Contact = () => {
                   <div>
                     <p className="font-semibold">Email</p>
                     <a
-                      href="mailto:info@darhartlawncare.com"
+                      href="mailto:info@darlahartford.com"
                       className="text-lawn-600 hover:text-lawn-700"
                     >
-                      info@darhartlawncare.com
+                      info@darlahartford.com
                     </a>
                   </div>
                 </div>
