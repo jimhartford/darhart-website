@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-lawn-600 via-lawn-700 to-lawn-800 text-white"
+      className="relative h-[600px] md:h-[700px] lg:h-[800px] flex items-center justify-center bg-gradient-to-br from-lawn-600 via-lawn-700 to-lawn-800 text-white"
       style={{
         backgroundImage: `url('${import.meta.env.BASE_URL}images/hero/grass.JPG')`,
         backgroundSize: 'cover',
@@ -22,6 +22,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="w-full"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             THOROUGH. RELIABLE. FRIENDLY.
