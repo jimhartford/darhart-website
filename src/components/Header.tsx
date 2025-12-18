@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Button } from './ui/button'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, Mail } from 'lucide-react'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -39,11 +38,11 @@ const Header = () => {
   }
 
   const navItems = [
-    { label: 'About', id: 'about' },
     { label: 'Services', id: 'services' },
     { label: 'Gallery', id: 'gallery' },
+    { label: 'About', id: 'about' },
     { label: 'Testimonials', id: 'testimonials' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Contact Us', id: 'contact' },
   ]
 
   return (
@@ -71,9 +70,9 @@ const Header = () => {
         </div>
 
         {/* Navigation Bar */}
-        <div className="flex items-center justify-between border-t border-gray-200 py-2 md:py-3">
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8 flex-1 justify-center">
+        <div className="relative flex items-center justify-between border-t border-gray-200 py-2 md:py-3">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -85,22 +84,22 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3 lg:gap-4">
+          {/* Desktop CTA Icons */}
+          <div className="hidden md:flex items-center gap-3 lg:gap-4 ml-auto">
             <a
               href="tel:+15132593912"
-              className="flex items-center gap-2 text-lawn-700 hover:text-lawn-600 font-medium text-sm lg:text-base"
+              className="text-lawn-700 hover:text-lawn-600 transition-colors"
+              aria-label="Call (513) 259-3912"
             >
-              <Phone className="w-4 h-4" />
-              <span className="hidden lg:inline">(513) 259-3912</span>
-              <span className="lg:hidden">Call</span>
+              <Phone className="w-5 h-5" />
             </a>
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="bg-lawn-600 hover:bg-lawn-700 text-sm lg:text-base px-3 lg:px-4"
+            <a
+              href="mailto:info@darlahartford.com"
+              className="text-lawn-700 hover:text-lawn-600 transition-colors"
+              aria-label="Email info@darlahartford.com"
             >
-              Get Free Estimate
-            </Button>
+              <Mail className="w-5 h-5" />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -131,20 +130,21 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="pt-2 border-t border-gray-200 mt-2 space-y-2">
+              <div className="pt-2 border-t border-gray-200 mt-2 flex items-center gap-4 px-2">
                 <a
                   href="tel:+15132593912"
-                  className="flex items-center gap-2 text-lawn-700 font-medium py-2 px-2 text-base"
+                  className="text-lawn-700 hover:text-lawn-600 transition-colors"
+                  aria-label="Call (513) 259-3912"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>(513) 259-3912</span>
                 </a>
-                <Button
-                  onClick={() => scrollToSection('contact')}
-                  className="bg-lawn-600 hover:bg-lawn-700 w-full mx-2"
+                <a
+                  href="mailto:info@darlahartford.com"
+                  className="text-lawn-700 hover:text-lawn-600 transition-colors"
+                  aria-label="Email info@darlahartford.com"
                 >
-                  Get Free Estimate
-                </Button>
+                  <Mail className="w-5 h-5" />
+                </a>
               </div>
             </nav>
           </div>

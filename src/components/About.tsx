@@ -3,16 +3,16 @@ import { motion } from 'framer-motion'
 const About = () => {
   const founders = [
     {
-      name: 'Tim Darhart',
-      role: 'Co-Founder & Lead Designer',
+      name: 'Samuel Darla',
+      role: 'Co-Founder',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
-      bio: 'With over 15 years of experience in landscape design and installation, Tim brings creative vision and technical expertise to every project. His passion for transforming outdoor spaces has helped countless homeowners and businesses create their dream landscapes.',
+      bio: "I'm Samuel Darla, co-founder of Darla Hartford, and I take pride in being directly involved in the work we do. From planning and site preparation to installation and final walkthroughs, I personally oversee projects to ensure every detail meets our standards. My dedication is rooted in quality workmanship, clear communication, and delivering results our clients can trust.",
     },
     {
-      name: 'Sarah Darhart',
-      role: 'Co-Founder & Operations Director',
+      name: 'Malik Hartford',
+      role: 'Co-Founder',
       image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80',
-      bio: 'Sarah oversees operations and client relations, ensuring every project runs smoothly from concept to completion. Her dedication to customer satisfaction and attention to detail has built lasting relationships with clients throughout the community.',
+      bio: '',
     },
   ]
 

@@ -1,4 +1,3 @@
-import { Button } from './ui/button'
 import { Phone, ChevronDown } from 'lucide-react'
 import { motion } from 'framer-motion'
 
@@ -22,7 +21,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-lawn-600 via-lawn-700 to-lawn-800 text-white"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&q=80')`,
+        backgroundImage: `url('${import.meta.env.BASE_URL}images/hero/mulch.jpeg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundBlendMode: 'overlay',
@@ -45,14 +44,7 @@ const Hero = () => {
             Professional lawn care and landscaping services to enhance the beauty
             of your home or business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              onClick={() => scrollToSection('contact')}
-              size="lg"
-              className="bg-white text-lawn-700 hover:bg-gray-100 text-lg px-8 py-6"
-            >
-              GET A FREE ESTIMATE!
-            </Button>
+          <div className="flex justify-center items-center">
             <a
               href="tel:+15132593912"
               className="flex items-center gap-2 text-xl font-semibold hover:text-lawn-300 transition-colors"

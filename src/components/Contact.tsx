@@ -194,8 +194,8 @@ const Contact = () => {
                   <div>
                     <p className="font-semibold">Address</p>
                     <p className="text-gray-600">
-                      123 Main Street<br />
-                      Your City, ST 12345
+                      199 David Lee Ct<br />
+                      Monroe, OH 45050
                     </p>
                   </div>
                 </div>

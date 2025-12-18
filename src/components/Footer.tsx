@@ -21,8 +21,8 @@ const Footer = () => {
             </div>
             <p className="text-lawn-600 font-semibold mb-1">Darla Hartford Landscaping</p>
             <p className="text-lawn-600 text-sm">
-              123 Main Street<br />
-              Your City, ST 12345
+              199 David Lee Ct<br />
+              Monroe, OH 45050
             </p>
           </div>
 
