@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
-import { Sprout, Wrench, Palette, HardHat, Droplets, Lightbulb } from 'lucide-react'
+import { Sprout, Wrench, Palette, HardHat, Droplets, Lightbulb, Cloud, Sun, Leaf, Snowflake } from 'lucide-react'
 
 const Services = () => {
   const services = [
@@ -42,6 +42,33 @@ const Services = () => {
     },
   ]
 
+  const seasonalServices = [
+    {
+      season: 'Spring',
+      icon: Cloud,
+      months: 'March – May',
+      focus: 'Clean-ups, planting, mulch refresh, bed edging, spring pruning & power washing',
+    },
+    {
+      season: 'Summer',
+      icon: Sun,
+      months: 'June – August',
+      focus: 'Weekly mowing, trimming, hedge shaping, bed maintenance & tree pruning',
+    },
+    {
+      season: 'Fall',
+      icon: Leaf,
+      months: 'September – November',
+      focus: 'Leaf removal, final mowing, fall planting, mulch install & winter prep',
+    },
+    {
+      season: 'Winter',
+      icon: Snowflake,
+      months: 'December – February',
+      focus: 'Snow plowing, salting, holiday lights, winter pruning & spring planning',
+    },
+  ]
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -60,7 +87,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
@@ -95,6 +122,51 @@ const Services = () => {
             )
           })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-20 pt-20 border-t border-gray-200"
+        >
+          <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+            SEASONAL SERVICES
+          </h3>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Year-round care tailored to each season
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {seasonalServices.map((item, index) => {
+              const Icon = item.icon
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <Card className="h-full hover:shadow-lg transition-shadow">
+                    <CardHeader className="text-center">
+                      <Icon className="w-10 h-10 text-lawn-600 mx-auto mb-3" />
+                      <CardTitle className="text-2xl">{item.season}</CardTitle>
+                      <CardDescription className="text-sm font-medium text-gray-600 mt-1">
+                        {item.months}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {item.focus}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )
+            })}
+          </div>
+        </motion.div>
       </div>
     </section>
   )
