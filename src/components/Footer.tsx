@@ -39,7 +39,7 @@ const Footer = () => {
             </a>
             <div className="flex gap-3 justify-center">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1AX1rWbE1h/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center hover:bg-blue-700 transition-colors"

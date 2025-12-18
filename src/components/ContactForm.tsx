@@ -26,11 +26,11 @@ const ContactForm = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="w-full overflow-hidden rounded-lg shadow-lg" style={{ height: '1200px' }}>
+          <div className="w-full rounded-lg overflow-hidden">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSdq6nXGBGwdBgcwX3yTmbHPUa4n2yn-IP8-8-HvadFcGsbu4A/viewform?embedded=true"
               width="100%"
-              height="100%"
+              height="1200"
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}

@@ -1,37 +1,39 @@
 import { motion } from 'framer-motion'
-import { Card, CardContent } from './ui/card'
-import { Star } from 'lucide-react'
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Jim Sweeney',
-      rating: 5,
-      text: 'Great hardscape reno from Tim and team. They were great to work with and delivered on our vision.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
+      text: 'It looks amazing',
+      size: 'text-3xl md:text-4xl',
+      position: { top: '5%', left: '10%' },
+      rotation: -3,
+      delay: 0.1,
     },
     {
-      name: 'Sarah Johnson',
-      rating: 5,
-      text: 'Professional service from start to finish. Our lawn has never looked better! Highly recommend.',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
+      text: "The most easiest and smooth process I've ever experienced",
+      size: 'text-xl md:text-2xl',
+      position: { top: '15%', right: '5%' },
+      rotation: 2,
+      delay: 0.2,
     },
     {
-      name: 'Michael Chen',
-      rating: 5,
-      text: 'The landscape design exceeded our expectations. The team was knowledgeable and courteous throughout the project.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
+      text: 'Will 100% recommend to everyone I know',
+      size: 'text-2xl md:text-3xl',
+      position: { bottom: '25%', left: '15%' },
+      rotation: -2,
+      delay: 0.3,
     },
     {
-      name: 'Emily Rodriguez',
-      rating: 5,
-      text: 'Outstanding work on our water feature installation. It\'s become the centerpiece of our backyard!',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80',
+      text: 'They are hardworking, dependable, and ready to help get your property looking its best',
+      size: 'text-lg md:text-xl',
+      position: { bottom: '10%', right: '10%' },
+      rotation: 3,
+      delay: 0.4,
     },
   ]
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-20 bg-gray-50 relative min-h-[500px] md:min-h-[600px]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -45,38 +47,21 @@ const Testimonials = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="relative max-w-6xl mx-auto h-[400px] md:h-[500px]">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: testimonial.delay }}
+              className={`absolute ${testimonial.size} font-semibold text-gray-800 italic max-w-xs md:max-w-sm`}
+              style={{
+                ...testimonial.position,
+                transform: `rotate(${testimonial.rotation}deg)`,
+              }}
             >
-              <Card className="h-full">
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div>
-                      <h3 className="font-semibold text-lg">{testimonial.name}</h3>
-                      <div className="flex gap-1">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 italic">"{testimonial.text}"</p>
-                </CardContent>
-              </Card>
+              "{testimonial.text}"
             </motion.div>
           ))}
         </div>
