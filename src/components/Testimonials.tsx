@@ -34,6 +34,14 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="py-20 bg-gray-50 relative min-h-[500px] md:min-h-[600px]">
+      <style>{`
+        @media (max-width: 767px) {
+          .testimonial-item {
+            position: static !important;
+            transform: none !important;
+          }
+        }
+      `}</style>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -47,23 +55,29 @@ const Testimonials = () => {
           </h2>
         </motion.div>
 
-        <div className="relative max-w-6xl mx-auto h-[400px] md:h-[500px]">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: testimonial.delay }}
-              className={`absolute ${testimonial.size} font-semibold text-gray-800 italic max-w-xs md:max-w-sm`}
-              style={{
-                ...testimonial.position,
-                transform: `rotate(${testimonial.rotation}deg)`,
-              }}
-            >
-              "{testimonial.text}"
-            </motion.div>
-          ))}
+        <div className="flex flex-col items-center md:items-start md:relative max-w-6xl mx-auto md:h-[500px] gap-6 md:gap-0">
+          {testimonials.map((testimonial, index) => {
+            const desktopStyles: React.CSSProperties = {
+              top: testimonial.position.top,
+              left: testimonial.position.left,
+              right: testimonial.position.right,
+              bottom: testimonial.position.bottom,
+              transform: `rotate(${testimonial.rotation}deg)`,
+            }
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: testimonial.delay }}
+                className={`testimonial-item ${testimonial.size} font-semibold text-gray-800 italic text-center md:text-left max-w-xs md:max-w-sm md:absolute`}
+                style={desktopStyles}
+              >
+                "{testimonial.text}"
+              </motion.div>
+            )
+          })}
         </div>
       </div>
     </section>

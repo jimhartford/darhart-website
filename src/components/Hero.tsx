@@ -1,21 +1,7 @@
-import { Phone, ChevronDown } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      const headerOffset = 80
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
-  }
-
   return (
     <section
       id="home"
@@ -55,21 +41,6 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <button
-          onClick={() => scrollToSection('services')}
-          className="text-white hover:text-lawn-300 transition-colors"
-          aria-label="Scroll down"
-        >
-          <ChevronDown className="w-8 h-8" />
-        </button>
-      </motion.div>
     </section>
   )
 }
