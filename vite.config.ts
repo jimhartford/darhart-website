@@ -5,9 +5,9 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' && !process.env.CUSTOM_DOMAIN 
-    ? '/darhart-website/' 
-    : '/',
+  // Temporarily set to /darhart-website/ for GitHub Pages
+  // Change to '/' once custom domain is configured
+  base: '/darhart-website/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
