@@ -38,7 +38,7 @@ const Services = () => {
       title: 'Snow & Ice Management',
       description: 'Reliable winter safety and access. Snow plowing, snow blowing, sidewalk shoveling, salting & ice management.',
       icon: Snowflake,
-      image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
+      image: `${import.meta.env.BASE_URL}images/landscape-photos/shoveling.jpg`,
     },
   ]
 
