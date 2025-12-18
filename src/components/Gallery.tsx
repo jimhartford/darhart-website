@@ -19,6 +19,20 @@ const Gallery = () => {
     `${import.meta.env.BASE_URL}images/landscape-photos/mulch4-after.JPG`,
   ]
 
+  const beforeAltTexts = [
+    "Landscape bed before mulch installation showing overgrown weeds and bare soil",
+    "Garden bed before professional landscaping service with unkempt plants and debris",
+    "Landscape area before mulch treatment displaying weeds and uneven ground",
+    "Property landscaping before cleanup and mulch installation showing overgrowth"
+  ]
+
+  const afterAltTexts = [
+    "Landscape bed after professional mulch installation with clean, fresh mulch and well-maintained plants",
+    "Garden bed after landscaping service showing neatly installed mulch and trimmed plants",
+    "Landscape area after mulch treatment with clean, professional appearance",
+    "Property landscaping after cleanup and mulch installation with pristine, well-maintained appearance"
+  ]
+
   return (
     <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -95,7 +109,7 @@ const Gallery = () => {
                 >
                   <img
                     src={image}
-                    alt={`After image ${index + 1}`}
+                    alt={afterAltTexts[index]}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
@@ -131,7 +145,7 @@ const Gallery = () => {
                 </button>
                 <img
                   src={selectedImage.column === 'before' ? beforeImages[selectedImage.index] : afterImages[selectedImage.index]}
-                  alt={`Gallery image`}
+                  alt={selectedImage.column === 'before' ? beforeAltTexts[selectedImage.index] : afterAltTexts[selectedImage.index]}
                   className="max-w-full max-h-[90vh] object-contain rounded-lg"
                 />
               </motion.div>

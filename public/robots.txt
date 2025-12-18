@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://darlahartford.com/sitemap.xml
+
+# Disallow admin or private paths if any exist
+Disallow: /admin/
