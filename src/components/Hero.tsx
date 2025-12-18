@@ -21,7 +21,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-lawn-600 via-lawn-700 to-lawn-800 text-white"
       style={{
-        backgroundImage: `url('${import.meta.env.BASE_URL}images/hero/mulch.jpeg')`,
+        backgroundImage: `url('${import.meta.env.BASE_URL}images/hero/grass.JPG')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundBlendMode: 'overlay',
@@ -63,7 +63,7 @@ const Hero = () => {
         transition={{ repeat: Infinity, duration: 2 }}
       >
         <button
-          onClick={() => scrollToSection('about')}
+          onClick={() => scrollToSection('services')}
           className="text-white hover:text-lawn-300 transition-colors"
           aria-label="Scroll down"
         >
