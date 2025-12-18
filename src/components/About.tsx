@@ -12,7 +12,7 @@ const About = () => {
       name: 'Malik Hartford',
       role: 'Co-Founder',
       image: `${import.meta.env.BASE_URL}images/about-us/malik-hartford.jpg`,
-      bio: '',
+      bio: "I grew up in the West Chester community, where I developed a strong work ethic and respect for doing things the right way. That mindset carried with me to Ohio State, where playing football reinforced discipline and accountability. As a co-founder of Darla Hartford, my focus is on building a business that is organized, consistent, and built to last, ensuring our clients receive professional service they can trust every step of the way.",
     },
   ]
 
@@ -72,11 +72,7 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
             <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              Darla Hartford Landscaping specializes in the creative design, professional installation, and maintenance
-              of landscape plantings, walkways, patios, retaining walls, landscape lighting, water gardens, and
-              other landscape amenities. We enhance the beauty of your home or business by creating artistic and
-              practical designs suited to your specific needs. Your satisfaction is very important to us, and our
-              team will make every effort to keep you informed and involved throughout your outdoor improvement project.
+              Our mission is to build a landscaping company people can rely on and feel confident hiring, one that values care, consistency, and pride in every project. We believe the quality of our work starts long before we ever arrive on a property, through preparation, communication, and thoughtful planning. As a locally rooted business, we take pride in serving our community, building long-term relationships, and creating outdoor spaces that reflect the standards and integrity we bring to everything we do.
             </p>
           </motion.div>
         </motion.div>

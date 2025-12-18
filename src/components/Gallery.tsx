@@ -3,18 +3,18 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const [selectedImage, setSelectedImage] = useState<{ column: 'before' | 'after', index: number } | null>(null)
 
-  const images = [
-    'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
-    'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
-    'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
-    'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
-    'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
-    'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
-    'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
-    'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80',
-    'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+  const beforeImages = [
+    `${import.meta.env.BASE_URL}images/landscape-photos/mulch1-before.JPG`,
+    `${import.meta.env.BASE_URL}images/landscape-photos/mulch2-before.JPG`,
+    `${import.meta.env.BASE_URL}images/landscape-photos/mulch3-before.JPG`,
+  ]
+
+  const afterImages = [
+    `${import.meta.env.BASE_URL}images/landscape-photos/mulch1-after.JPG`,
+    `${import.meta.env.BASE_URL}images/landscape-photos/mulch2-after.JPG`,
+    `${import.meta.env.BASE_URL}images/landscape-photos/mulch3-after.JPG`,
   ]
 
   return (
@@ -35,25 +35,72 @@ const Gallery = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {images.map((image, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Before Column */}
+          <div>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative overflow-hidden rounded-lg cursor-pointer group"
-              onClick={() => setSelectedImage(index)}
+              transition={{ duration: 0.6 }}
+              className="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-900"
             >
-              <img
-                src={image}
-                alt={`Gallery image ${index + 1}`}
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-            </motion.div>
-          ))}
+              BEFORE
+            </motion.h3>
+            <div className="space-y-4">
+              {beforeImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative overflow-hidden rounded-lg cursor-pointer group"
+                  onClick={() => setSelectedImage({ column: 'before', index })}
+                >
+                  <img
+                    src={image}
+                    alt={`Before image ${index + 1}`}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* After Column */}
+          <div>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-900"
+            >
+              AFTER
+            </motion.h3>
+            <div className="space-y-4">
+              {afterImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative overflow-hidden rounded-lg cursor-pointer group"
+                  onClick={() => setSelectedImage({ column: 'after', index })}
+                >
+                  <img
+                    src={image}
+                    alt={`After image ${index + 1}`}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Lightbox Modal */}
@@ -81,8 +128,8 @@ const Gallery = () => {
                   <X className="w-8 h-8" />
                 </button>
                 <img
-                  src={images[selectedImage]}
-                  alt={`Gallery image ${selectedImage + 1}`}
+                  src={selectedImage.column === 'before' ? beforeImages[selectedImage.index] : afterImages[selectedImage.index]}
+                  alt={`Gallery image`}
                   className="max-w-full max-h-[90vh] object-contain rounded-lg"
                 />
               </motion.div>
