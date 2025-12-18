@@ -8,19 +8,19 @@ const Services = () => {
       title: 'Lawn Care & Turf Maintenance',
       description: 'Consistent care for healthy, sharp-looking lawns. Weekly/bi-weekly mowing, string trimming, edging, blowing, weed control & turf upkeep.',
       icon: Sprout,
-      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+      image: `${import.meta.env.BASE_URL}images/landscape-photos/lawn-care-turf.JPG`,
     },
     {
       title: 'Landscape Design & Installations',
       description: 'Custom enhancements and new landscape features. Landscape bed design & installs, flower planting, tree planting, and small landscape projects.',
       icon: Palette,
-      image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
+      image: `${import.meta.env.BASE_URL}images/landscape-photos/landscaping-design.jpg`,
     },
     {
       title: 'Mulching, Beds & Plant Care',
       description: 'Detail-focused services that define curb appeal. Mulch installation, bed edging, shrub trimming, hedge shaping, and tree pruning.',
       icon: Flower2,
-      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+      image: `${import.meta.env.BASE_URL}images/landscape-photos/mulching.JPG`,
     },
     {
       title: 'Property Clean-Ups & Debris Removal',

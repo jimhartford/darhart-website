@@ -9,12 +9,14 @@ const Gallery = () => {
     `${import.meta.env.BASE_URL}images/landscape-photos/mulch1-before.JPG`,
     `${import.meta.env.BASE_URL}images/landscape-photos/mulch2-before.JPG`,
     `${import.meta.env.BASE_URL}images/landscape-photos/mulch3-before.JPG`,
+    `${import.meta.env.BASE_URL}images/landscape-photos/mulch4-before.jpg`,
   ]
 
   const afterImages = [
     `${import.meta.env.BASE_URL}images/landscape-photos/mulch1-after.JPG`,
     `${import.meta.env.BASE_URL}images/landscape-photos/mulch2-after.JPG`,
     `${import.meta.env.BASE_URL}images/landscape-photos/mulch3-after.JPG`,
+    `${import.meta.env.BASE_URL}images/landscape-photos/mulch4-after.JPG`,
   ]
 
   return (
