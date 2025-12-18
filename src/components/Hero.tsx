@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative h-[600px] md:h-[700px] lg:h-[800px] flex items-center justify-center bg-gradient-to-br from-lawn-600 via-lawn-700 to-lawn-800 text-white"
+      className="relative min-h-screen md:h-[700px] lg:h-[800px] flex items-center justify-center bg-gradient-to-br from-lawn-600 via-lawn-700 to-lawn-800 text-white"
       style={{
         backgroundImage: `url('${import.meta.env.BASE_URL}images/hero/grass.JPG')`,
         backgroundSize: 'cover',
@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 text-center flex items-center justify-center min-h-full py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
