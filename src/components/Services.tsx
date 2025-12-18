@@ -26,13 +26,13 @@ const Services = () => {
       title: 'Property Clean-Ups & Debris Removal',
       description: 'One-time or recurring cleanup solutions. Spring & fall clean-ups, leaf removal, branch & debris removal, and end-of-season weed control.',
       icon: Trash2,
-      image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
+      image: `${import.meta.env.BASE_URL}images/landscape-photos/raking-leaves.jpg`,
     },
     {
       title: 'Exterior Cleaning & Specialty Services',
       description: 'High-impact services beyond landscaping. Power washing, holiday light installation & takedown, and tree & plant protection for winter.',
       icon: Sparkles,
-      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+      image: `${import.meta.env.BASE_URL}images/landscape-photos/power-washing.jpg`,
     },
     {
       title: 'Snow & Ice Management',
